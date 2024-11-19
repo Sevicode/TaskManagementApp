@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This app is a work in progress which initially created for a tutorial published in Medium.
+This app is a work in progress which initially created for a tutorial published in [Medium](https://medium.com/@SevdaSevinu/build-a-task-management-app-with-react-typescript-and-material-ui-frontend-a-beginners-guide-bb4df98b1223).
 
 ### App Functionality
 
