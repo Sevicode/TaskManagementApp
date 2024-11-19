@@ -17,6 +17,7 @@ Please ensure you have node and npm installed in your system. Fork the project a
 ## Follow me
 
 [Medium](https://medium.com/@SevdaSevinu)
+
 [Github](https://github.com/Sevicode)
 
 [LinkedIn](https://www.linkedin.com/in/sevda-amini-phd-ab770743/)
