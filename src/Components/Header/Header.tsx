@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
-import { Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
-    // Function to update the time
     const updateTime = () => {
       const now = new Date();
-      setCurrentTime(now.toLocaleString()); // Format in local date and time
+      setCurrentTime(now.toLocaleString());
     };
 
-    // Initial call and interval setup
     updateTime();
-    const intervalId = setInterval(updateTime, 1000); // Update every second
+    const intervalId = setInterval(updateTime, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
 
@@ -25,15 +22,25 @@ function Header() {
       style={{
         textAlign: "center",
         padding: "1rem",
-        background: "#D991CF",
+        background: "#F244D6",
         color: "#fff",
       }}
     >
-      <h1>Task Management App</h1>
-      <Typography>
-        <AccessTimeFilledIcon />
+      <Typography variant="h3" fontWeight={800}>
+        Task Management App
       </Typography>
-      <Typography>{currentTime}</Typography>
+      <Stack
+        direction={"row"}
+        alignItems="center"
+        justifyContent="center"
+        spacing={2}
+        sx={{ m: 4 }}
+      >
+        <AccessTimeFilledIcon />
+        <Typography fontSize={25} fontWeight={800}>
+          {currentTime}
+        </Typography>
+      </Stack>
     </header>
   );
 }

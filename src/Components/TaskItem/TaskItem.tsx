@@ -11,10 +11,9 @@ import {
   TableRow,
   TextField,
 } from "@mui/material";
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { ITask } from "../../Interfaces/Interface";
 import TodoList from "../TodoList/TodoList";
-import { symlink } from "fs";
 
 function TaskItem() {
   const [task, setTask] = useState<string>("");
@@ -76,7 +75,6 @@ function TaskItem() {
         backgroundColor: "#FFF7FA",
       }}
     >
-      {/* Input Fields */}
       <Stack
         spacing={2}
         direction={{ xs: "column", md: "row" }}
@@ -89,7 +87,8 @@ function TaskItem() {
           name="task"
           value={task}
           onChange={handleChange}
-          sx={{ backgroundColor: "#fff" }}
+          multiline
+          sx={{ backgroundColor: "#fff", width: "100%" }}
         />
         <TextField
           label="Start Date"
@@ -97,7 +96,7 @@ function TaskItem() {
           variant="outlined"
           value={startDate}
           onChange={handleChange}
-          sx={{ backgroundColor: "#fff" }}
+          sx={{ backgroundColor: "#fff", width: "100%" }}
         />
         <TextField
           label="End Date"
@@ -105,12 +104,12 @@ function TaskItem() {
           variant="outlined"
           value={endDate}
           onChange={handleChange}
-          sx={{ backgroundColor: "#fff" }}
+          sx={{ backgroundColor: "#fff", width: "100%" }}
         />
         <Button
           variant="contained"
           onClick={addTask}
-          sx={{ backgroundColor: "#FF03A9" }}
+          sx={{ backgroundColor: "#FF03A9", width: "50%", height: "100%" }}
         >
           Add Task
         </Button>
@@ -120,10 +119,10 @@ function TaskItem() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Task</TableCell>
-              <TableCell>Start Date</TableCell>
-              <TableCell>End Date</TableCell>
-              <TableCell>Actions</TableCell>
+              <TableCell sx={{ fontWeight: "bold" }}>Task</TableCell>
+              <TableCell sx={{ fontWeight: "bold" }}>Start Date</TableCell>
+              <TableCell sx={{ fontWeight: "bold" }}>End Date</TableCell>
+              <TableCell sx={{ fontWeight: "bold" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
 
