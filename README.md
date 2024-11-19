@@ -1,5 +1,7 @@
 # Task Management App
 
+![screen shot of the app](./src/Images/todo_app.png)
+
 ## Introduction
 
 This app is a work in progress which initially created for a tutorial published in Medium.
